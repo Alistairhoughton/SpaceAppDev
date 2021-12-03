@@ -111,12 +111,12 @@ body {
 }
 
 @keyframes inst {
-0% {
+  0% {
     opacity: 0;
-}
-100% {
+  }
+  100% {
     opacity: 1;
-}
+  }
 }
 
 @media only screen and (max-width: 1570px) {
@@ -132,7 +132,6 @@ body {
     font-size: 1rem;
   }
 }
-
 
 @media only screen and (max-width: 380px) {
   .shuttle {
