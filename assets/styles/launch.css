@@ -64,8 +64,8 @@ body {
     border: none;
     color: white;
     text-align: center;
-    font-family: 'Orbitron', sans-serif;
-    font-weight: 600;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
     font-size: 20px;
 }
 .launchButton {
@@ -76,8 +76,8 @@ body {
     text-transform: uppercase;
     border-style: none;
     border-radius: 50px;
-    font-family: 'Orbitron', sans-serif;
-    font-weight: 600;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
     letter-spacing: 1px;
     
     
@@ -94,8 +94,8 @@ body {
 ::placeholder {
     color: rgb(236, 236, 236);
     text-align: center;
-    font-family: 'Orbitron', sans-serif;
-    font-weight: 600;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
 }
 
 @media only screen and (max-width: 1570px) {

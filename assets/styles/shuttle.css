@@ -28,6 +28,7 @@ body {
        object-fit:cover; 
        animation: zoom;
        animation-duration: 20s;
+       animation-iteration-count: infinite
 }
 
 @keyframes zoom {
