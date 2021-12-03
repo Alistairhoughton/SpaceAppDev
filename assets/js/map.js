@@ -28,13 +28,14 @@ function issData() {
       // console.log("iss data", data);
       // console.log("lat", lat);
       // console.log("lon", lon);
+      issPan(lat, lon);
     });
-  issPan(lat, lon);
-}
-
-function issPan(lat, lon) {
-  iss.setLatLng(lat, lon);
-  map.panTo((lat, lon), (animate = true));
+  }
+  // issPan(lat,lon);
+  
+  function issPan(lat, lon) {
+    iss.setLatLng(lat, lon);
+    map.panTo((lat, lon), (animate = true));
 }
 
 var spaceIcon = L.icon({
@@ -46,8 +47,7 @@ var spaceIcon = L.icon({
 });
 
 var iss = L.marker([0, 0], { icon: spaceIcon }).addTo(map);
-
 issData();
-issPan();
+
 
 // var updateData = setInterval(issPan,1000)

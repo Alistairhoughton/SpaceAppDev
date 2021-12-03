@@ -1,0 +1,51 @@
+html {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background: url(https://img.wallpapersafari.com/desktop/1920/1080/44/98/fpyhXL.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.mars {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  position: relative;
+}
+.marsimg {
+  height: 100vh;
+}
+
+.marsimgcontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  z-index: 2;
+  /* display: none; */
+  animation-name: rotate;
+  animation-duration: 5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(90);
+    }
+}
+
