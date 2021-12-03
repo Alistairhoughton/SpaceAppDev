@@ -1,0 +1,72 @@
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-size: 8px;
+    overflow: hidden;
+
+}
+
+.shuttleholder {
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+   
+   .shuttle {
+       width: 100%;
+       object-fit:cover; 
+       animation: zoom;
+       animation-duration: 20s;
+}
+
+@keyframes zoom {
+    0% {
+        transform: scale(100%);
+    }
+
+    0% {
+        transform: scale(120%);
+    }
+}
+
+
+
+   .welcomeMessage {
+       position: absolute;
+       color: white;
+       padding-right: 90px;
+       text-align: center;
+       font-size: 1rem;
+       line-height: 1.5;
+       opacity: 0;
+       animation-delay: 750ms;
+       animation-name: load;
+       animation-duration: 0.5s;
+       animation-fill-mode: forwards;
+   }
+
+
+   @keyframes load {
+       0% {
+           opacity: 0;
+       }
+       100% {
+        opacity: 1;
+        
+      }
+   }
+
+
+
+   
