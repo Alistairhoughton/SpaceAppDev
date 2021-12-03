@@ -117,3 +117,32 @@ body {
     opacity: 1;
 }
 }
+
+@media only screen and (max-width: 1570px) {
+  .shuttle {
+    height: 100vh;
+    overflow: hidden;
+    position: fixed;
+  }
+
+  .welcomeMessage {
+    padding: 0;
+    width: 100%;
+    font-size: 1rem;
+  }
+}
+
+
+@media only screen and (max-width: 380px) {
+  .shuttle {
+    height: 100vh;
+    overflow: hidden;
+    position: fixed;
+  }
+
+  .welcomeMessage {
+    padding: 0;
+    width: 100%;
+    font-size: 0.8rem;
+  }
+}
