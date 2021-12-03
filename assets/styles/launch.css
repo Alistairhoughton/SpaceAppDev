@@ -56,6 +56,7 @@ body {
     z-index: 2;
 }
 
+
 .launchInput {
     padding: 4px;
     flex-grow: 1;
@@ -67,11 +68,12 @@ body {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 20px;
+    z-index: 4;
 }
 .launchButton {
     height: 54px;
     width: 120px;
-    background: #d41e5b;
+    background: #5818be;
     color: #ffffff;
     text-transform: uppercase;
     border-style: none;
@@ -81,13 +83,14 @@ body {
     letter-spacing: 1px;
     
     
+    
 }
     
 
 
 .launchButton:hover {
     cursor: pointer;
-    background: #c91578;
+    background: #31aece;
     transition: 0.3s ease;
 }
 
