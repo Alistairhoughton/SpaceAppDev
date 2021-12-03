@@ -1,73 +1,119 @@
 html {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
-    font-size: 8px;
-    overflow: hidden;
-
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  font-size: 8px;
+  overflow: hidden;
 }
 
 .shuttleholder {
-    height: 100vh;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-   
-   .shuttle {
-       width: 100%;
-       object-fit:cover; 
-       animation: zoom;
-       animation-duration: 20s;
-       animation-iteration-count: infinite
+
+.shuttle {
+  width: 100%;
+  object-fit: cover;
+  animation: zoom;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
 }
 
 @keyframes zoom {
-    0% {
-        transform: scale(100%);
-    }
+  0% {
+    transform: scale(100%);
+  }
 
-    0% {
-        transform: scale(120%);
-    }
+  0% {
+    transform: scale(120%);
+  }
 }
 
+.welcomeMessage {
+  position: absolute;
+  color: white;
+  padding-right: 90px;
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.5;
+  opacity: 0;
+  animation-delay: 750ms;
+  animation-name: load;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
 
+@keyframes load {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 
-   .welcomeMessage {
-       position: absolute;
-       color: white;
-       padding-right: 90px;
-       text-align: center;
-       font-size: 1rem;
-       line-height: 1.5;
-       opacity: 0;
-       animation-delay: 750ms;
-       animation-name: load;
-       animation-duration: 0.5s;
-       animation-fill-mode: forwards;
-   }
+#warningAlert {
+  opacity: 0;
+  margin-top: 27px;
+  margin-bottom: 15px;
+  width: 120px;
+  animation-name: warning;
+  animation-delay: 4s;
+  animation-fill-mode: forwards;
+  animation-duration: 0.5s;
+  cursor: pointer;
+}
 
+@keyframes warning {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 
-   @keyframes load {
-       0% {
-           opacity: 0;
-       }
-       100% {
-        opacity: 1;
-        
-      }
-   }
+#warningbg {
+  animation-name: flash;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
 
+@keyframes flash {
+  0% {
+    fill: #500d13;
+  }
 
+  100% {
+    fill: #ec061d;
+  }
+}
 
-   
+#inst {
+  animation-name: inst;
+  animation-delay: 5s;
+  animation-fill-mode: forwards;
+  animation-duration: 0.5s;
+  opacity: 0;
+}
+
+@keyframes inst {
+0% {
+    opacity: 0;
+}
+100% {
+    opacity: 1;
+}
+}
