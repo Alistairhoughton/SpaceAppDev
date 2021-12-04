@@ -41,11 +41,15 @@ body {
 
 @keyframes rotate {
     0% {
-        transform: rotate(0);
+        transform: scale(100%);
+    }
+
+    50% {
+        transform: scale(105%);
     }
 
     100% {
-        transform: rotate(90);
+        transform: scale(120%);
     }
 }
 

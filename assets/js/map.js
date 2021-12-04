@@ -2,7 +2,7 @@ L.mapbox.accessToken =
   "pk.eyJ1IjoiaGFra2kxODEwIiwiYSI6ImNrd21reTdzajJjdjIyeG5zanY4M2FwN3UifQ._Y_FFA1j6916TXqVusZ6Lg";
 var map = L.map("map", {
   center: [0, 0],
-  zoom: 3,
+  zoom: 6,
   minZoom: 2,
   maxZoom: 6,
 });
@@ -25,22 +25,21 @@ function issData() {
     .then(function (data) {
       var lat = data.latitude;
       var lon = data.longitude;
-      // console.log("iss data", data);
+      console.log("iss data", data);
       // console.log("lat", lat);
       // console.log("lon", lon);
       issPan(lat, lon);
     });
   }
-  // issPan(lat,lon);
+  
   
   function issPan(lat, lon) {
-    iss.setLatLng(lat, lon);
-    map.panTo((lat, lon), (animate = true));
+    iss.setLatLng([lat, lon]);
+    map.panTo(([lat, lon]), (animate = true));
 }
 
 var spaceIcon = L.icon({
-  iconUrl:
-    "https://toppng.com/uploads/preview/red-circle-1155276042606ekqvli9k.png",
+  iconUrl:"../assets/media/spaceship2.svg",
   iconSize: [50, 50],
   iconAnchor: [25, 15],
   popupAnchor: [50, 25],
@@ -50,4 +49,4 @@ var iss = L.marker([0, 0], { icon: spaceIcon }).addTo(map);
 issData();
 
 
-// var updateData = setInterval(issPan,1000)
+var updateData = setInterval(issData,1000)
