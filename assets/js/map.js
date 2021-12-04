@@ -49,4 +49,4 @@ var iss = L.marker([0, 0], { icon: spaceIcon }).addTo(map);
 issData();
 
 
-var updateData = setInterval(issData,1000)
+// var updateData = setInterval(issData,1000)
