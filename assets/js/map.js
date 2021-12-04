@@ -2,18 +2,19 @@ L.mapbox.accessToken =
   "pk.eyJ1IjoiaGFra2kxODEwIiwiYSI6ImNrd21reTdzajJjdjIyeG5zanY4M2FwN3UifQ._Y_FFA1j6916TXqVusZ6Lg";
 var map = L.map("map", {
   center: [0, 0],
-  zoom: 6,
-  minZoom: 2,
-  maxZoom: 6,
+  zoom: 8,
+  minZoom: 3,
+  maxZoom: 12,
 });
+
+document.getElementsByClassName( 'leaflet-control-attribution' )[0].style.display = 'none';
 
 L.tileLayer(
   "https://api.mapbox.com/styles/v1/hakki1810/ckwmmq08p69z514oclunhvyfu/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiaGFra2kxODEwIiwiYSI6ImNrd21reTdzajJjdjIyeG5zanY4M2FwN3UifQ._Y_FFA1j6916TXqVusZ6Lg",
   {
     tileSize: 512,
     zoomOffset: -1,
-    attribution:
-      '© <a href="https://www.mapbox.com/contribute/">Mapbox</a> © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+    
   }
 ).addTo(map);
 
@@ -26,9 +27,16 @@ function issData() {
       var lat = data.latitude;
       var lon = data.longitude;
       console.log("iss data", data);
-      // console.log("lat", lat);
-      // console.log("lon", lon);
       issPan(lat, lon);
+
+      document.querySelector(".latdata").textContent =
+        "Latitude: " + data.latitude;
+      document.querySelector(".londata").textContent =
+        "Longitude: " + data.longitude;
+      document.querySelector(".vel").textContent =
+          "Velocity: " + Math.round(data.velocity) + " km/h"; 
+      document.querySelector(".alti").textContent =
+          "Alititude: " + Math.round(data.altitude)  + " Kilometers"
     });
   }
   
@@ -40,7 +48,7 @@ function issData() {
 
 var spaceIcon = L.icon({
   iconUrl:"../assets/media/spaceship2.svg",
-  iconSize: [50, 50],
+  iconSize: [105, 75],
   iconAnchor: [25, 15],
   popupAnchor: [50, 25],
 });
@@ -49,4 +57,4 @@ var iss = L.marker([0, 0], { icon: spaceIcon }).addTo(map);
 issData();
 
 
-// var updateData = setInterval(issData,1000)
+var updateData = setInterval(issData,2000)
