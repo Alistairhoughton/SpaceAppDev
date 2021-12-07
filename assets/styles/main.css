@@ -49,24 +49,132 @@ body {
 .issspace {
   height: 100vh;
   width: 100%;
-  background-color: palegreen;
+  background-color: black;
   position: relative;
+}
+
+.svgarrow {
+  fill: white;
+  transform: translate(468px, -306px) rotate(11deg) scale(60%);
+  position: absolute;
+  z-index: 2;
+}
+
+.svgarrowtwo {
+  fill: white;
+  transform: translate(-544px, 284px) rotate(4deg) scale(70%);
+  z-index: 2;
+  position: absolute;
 }
 
 .crewmates {
   height: 100vh;
   width: 100%;
-  background-color: rgb(152, 175, 251);
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+}
+
+.svgplanetone {
+  position: absolute;
+  z-index: 3;
+  fill: white;
+  transform: translate(-218px, -342px) scale(0.7);
+}
+
+.svgplanettwo {
+  position: absolute;
+  z-index: 3;
+  fill: white;
+  transform: translate(705px, 263px) scale(0.8);
+}
+
+.crewmateslistholder {
+  width: 20%;
+  min-height: 80%;
+  height: auto;
+  background-color: rgb(0, 0, 0);
+  border-radius: 20px;
+  min-width: 295px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: left;
+  font-size: 1rem;
+  border: solid 1px white;
+  margin: 20px;
+  margin-right: 42px;
+}
+
+.crewmatelist {
+  padding-left: 40px;
+  list-style: none;
+  font-size: 1rem;
+  color: white;
+  line-height: 1rem;
+  font-family: "Roboto", sans-serif;
+}
+
+.astrobutton {
+  background-color: transparent;
+  border: none;
+  width: 1300px;
+  transition: all 0.3s ease-out;
+}
+
+.astrobutton:hover {
+  cursor: pointer;
+  transform: scale(110%);
+}
+
+.astronautimgholder {
+  height: 80%;
+  width: 70%;
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.astronautimgline {
+  width: 50%;
+  transition: ease-in-out;
+  animation-name: astrohover;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  transition-timing-function: ease-in-out;
+}
+
+@keyframes astrohover {
+  0% {
+    transform: translateY(10px);
+  }
+
+  100% {
+    transform: translateY(-30px);
+  }
 }
 
 .mapsection {
   height: 100vh;
   width: 100%;
-  background-color: rgb(0, 0, 0);
+  /* background-color: rgb(0, 0, 0); */
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+  background: url(https://news.microsoft.com/wp-content/uploads/prod/sites/56/2020/10/Space_1-1000x563-1-960x563.jpg)
+    no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 #map {
@@ -82,7 +190,7 @@ body {
   width: 20%;
   height: 80%;
   margin: 20px;
-  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.822);
   border-radius: 20px;
   min-width: 295px;
   display: flex;
@@ -100,6 +208,13 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+.crewmateslisttitle {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  padding-bottom: 20px;
+  font-size: 1.5rem;
+}
+
 li {
   padding-top: 30px;
   padding-bottom: 30px;
@@ -111,6 +226,18 @@ li {
   font-weight: 400;
   padding-bottom: 20px;
   font-size: 1.5rem;
+  line-height: 30px;
+}
+
+.gradientbreak {
+  background: transparent;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 1) 100%,
+    rgba(255, 255, 255, 0) 0%
+  );
+  width: 100%;
+  height: 100px;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -139,6 +266,31 @@ li {
     color: white;
     line-height: 1rem;
     font-family: "Roboto", sans-serif;
+  }
+
+  .crewmates {
+    height: auto;
+  }
+
+  .crewmateslistholder {
+    height: 650px;
+    margin-bottom: 150px;
+    width: 69%;
+    margin-top: 100px;
+  }
+
+  .astronautimgline {
+    width: auto;
+  }
+
+  .astronautimgholder {
+    height: auto;
+    width: auto;
+    margin-bottom: 100px;
+  }
+
+  .astrobutton {
+    width: auto;
   }
 }
 
@@ -186,12 +338,18 @@ li {
   }
 
   #map {
-    height: 650px;
+    width: 90%;
+    height: 98vh;
+    margin: 10px;
+    border-radius: 20px;
+    min-width: 295px;
+    border: solid 1px white;
   }
 
   .dataholder {
     height: 650px;
-    width: 70%;
+    width: 90%;
+    margin-bottom: 100px;
   }
 
   .flightdatalist {
@@ -200,6 +358,16 @@ li {
     color: white;
     line-height: 1rem;
     font-family: "Roboto", sans-serif;
+  }
+
+  .astrobutton {
+    width: auto;
+  }
+
+  .crewmateslistholder {
+    margin: 0px;
+    margin-bottom: 100px;
+    width: 90%;
   }
 }
 
@@ -334,5 +502,3 @@ input:checked + .slider:before {
     height: 230px;
   }
 }
-
-

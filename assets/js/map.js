@@ -1,10 +1,14 @@
-// break {
+break {
+
+  var nameText = document.getElementById("storedName");
+  nameText.innerHTML = localStorage.getItem("name");
+  console.log(localStorage);
 
 L.mapbox.accessToken =
   "pk.eyJ1IjoiaGFra2kxODEwIiwiYSI6ImNrd21reTdzajJjdjIyeG5zanY4M2FwN3UifQ._Y_FFA1j6916TXqVusZ6Lg";
 var map = L.map("map", {
   center: [0, 0],
-  zoom: 8,
+  zoom: 6,
   minZoom: 3,
   maxZoom: 12,
 });

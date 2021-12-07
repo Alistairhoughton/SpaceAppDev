@@ -13,4 +13,3 @@ function issData() {
   };
   
   issData();
-  // var updateData = setInterval(issData,1000)
