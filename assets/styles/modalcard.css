@@ -1,0 +1,84 @@
+
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    width: 100%;
+}
+/* .goButton {
+
+} */
+
+/* .imgholder {
+  width: 400px;
+  height: 400px;
+  z-index: 1;
+} */
+
+.modal-card {
+    /* width: 90%; */
+    border-radius: 30px;
+    height: 900px;
+    color: rgb(219, 219, 219);
+    
+}
+
+.modal-card-head, .modal-card-foot, .modal-card-title{
+  background-color: rgb(27, 27, 27);
+  color: white;
+}
+
+.modal-card-body {
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    background-color: rgb(27, 27, 27);
+
+    
+}
+
+.cardpara {
+    padding-top: 10px;
+    font-size: 19.6px;
+}
+
+.modal-card-body {
+    scrollbar-width: thin;
+    scrollbar-color: rgb(214, 214, 214) rgb(192, 192, 192);
+    
+  
+  }
+  
+  /* Works on Chrome, Edge, and Safari */
+  .modal-card-body::-webkit-scrollbar {
+    width: 8px;
+    opacity: 0;
+  }
+  
+  .modal-card-body::-webkit-scrollbar-track {
+    background: rgb(204, 204, 204);
+    opacity: 0;
+  }
+  
+  .modal-card-body::-webkit-scrollbar-thumb {
+    background-color: rgb(167, 167, 167);
+    border-radius: 60px;
+    border: rgb(255, 255, 255);
+    opacity: 0;
+  }
+
+  @media only screen and (max-width: 450px) {
+    .modal-card {
+      width: 90%;
+  }
+   
+  .cardpara {
+    font-size: 1rem;
+  }
+
+  .modal-card-title {
+    font-size: 1rem;
+  }
+}

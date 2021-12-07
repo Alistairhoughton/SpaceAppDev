@@ -1,0 +1,104 @@
+/* body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */
+
+.soyuzcontainer {
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 100px;
+    position: relative;
+}
+
+.imgholder {
+    width: 40%px;
+    height: 40%px;
+    padding-right: 100px;
+    position: relative;
+}
+
+.issimg {
+    width: 550px;
+    padding-top: 300px;
+    animation-name: hoveriss;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    transition-timing-function: ease-in-out;
+}
+
+img {
+    width: 100%;
+}
+
+.soyuzimg{
+    width: 400px;
+    padding-bottom: 300px;
+    animation-name: hoversoy;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    transition-timing-function: ease-in-out;
+    animation-delay: 750ms;
+}
+
+
+@keyframes hoversoy {
+    0% {
+        transform: translateY(0px);
+    }
+
+    100% {
+        transform: translateY(50px);
+    }
+}
+
+@keyframes hoveriss {
+    0% {
+        transform: translateY(-30px);
+    }
+
+    100% {
+        transform: translateY(10px);
+    }
+}
+
+
+@media only screen and (max-width: 1250px) {
+    .soyuzcontainer {
+        height: auto;
+    }
+
+    .issimg {
+        padding-top: 0px;
+    }
+    .soyuzimg {
+        padding-bottom: 0px;
+    }
+}
+
+@media only screen and (max-width: 950px) {
+    .imgholder {
+        padding-right: 0px;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .soyuzimg {
+        width: 255px;
+        margin-left: 10px;
+    }
+
+    .issimg {
+        width: 300px;
+        margin-left: 13px;
+    }
+}
+

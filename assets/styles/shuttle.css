@@ -74,6 +74,7 @@ body {
   animation-fill-mode: forwards;
   animation-duration: 0.5s;
   cursor: pointer;
+  font-family: 'Orbit-B BT New', 'Orbitron' Courier, monospace;
 }
 
 @keyframes warning {

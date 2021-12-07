@@ -1,3 +1,5 @@
+// break {
+
 L.mapbox.accessToken =
   "pk.eyJ1IjoiaGFra2kxODEwIiwiYSI6ImNrd21reTdzajJjdjIyeG5zanY4M2FwN3UifQ._Y_FFA1j6916TXqVusZ6Lg";
 var map = L.map("map", {
@@ -28,7 +30,8 @@ function issData() {
       var lon = data.longitude;
       console.log("iss data", data);
       issPan(lat, lon);
-
+      // issPan2(lat, lon);
+      
       document.querySelector(".latdata").textContent =
         "Latitude: " + data.latitude;
       document.querySelector(".londata").textContent =
@@ -38,13 +41,19 @@ function issData() {
       document.querySelector(".alti").textContent =
           "Alititude: " + Math.round(data.altitude)  + " Kilometers"
     });
+    
   }
   
   
   function issPan(lat, lon) {
     iss.setLatLng([lat, lon]);
     map.panTo(([lat, lon]), (animate = true));
+    
 }
+
+// function issPan2(lat, lon) {
+//   map.panTo(([lat, lon]), (animate = true));
+// }
 
 var spaceIcon = L.icon({
   iconUrl:"../assets/media/spaceship2.svg",
@@ -54,7 +63,15 @@ var spaceIcon = L.icon({
 });
 
 var iss = L.marker([0, 0], { icon: spaceIcon }).addTo(map);
-issData();
 
+var updateData = setInterval(issData,1500)
 
-var updateData = setInterval(issData,2000)
+var checkbox = document.querySelector(".togglebutton");
+
+checkbox.addEventListener('change', function() {
+  if (this.checked) {
+    console.log("Checkbox is checked..");
+  } else {
+    console.log("Checkbox is not checked..");
+  }
+});
