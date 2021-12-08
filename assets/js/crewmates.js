@@ -4,7 +4,7 @@
 
 async function CrewmatesData() {
   var crewmate1
-  var link = "http://api.open-notify.org/astros.json"
+  var link = "https://cors-anywhere.herokuapp.com/http://api.open-notify.org/astros.json"
   var temp = await fetch(link)
  
 
