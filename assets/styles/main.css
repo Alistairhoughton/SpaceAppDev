@@ -5,6 +5,15 @@ body {
   font-size: 8px;
 }
 
+
+/* --------------------------------------------------- stops an horizontal scroll on some widths due to SVG breaking out of their container */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------------ */
+
 .abyss {
   height: 100vh;
   width: 100%;
@@ -55,7 +64,7 @@ body {
 
 .svgarrow {
   fill: white;
-  transform: translate(468px, -306px) rotate(11deg) scale(60%);
+  transform: translate(406px, -285px) rotate(11deg) scale(60%);
   position: absolute;
   z-index: 2;
 }
@@ -65,6 +74,14 @@ body {
   transform: translate(-544px, 284px) rotate(4deg) scale(70%);
   z-index: 2;
   position: absolute;
+}
+
+.svgplanetone {
+  transform: translate(89px, -342px) scale(0.7);
+}
+
+.svgplanetone {
+  transform: translate(-22px, 263px) scale(0.8);
 }
 
 .crewmates {
@@ -240,6 +257,12 @@ li {
   height: 100px;
 }
 
+.break {
+  width: 100%;
+  height: 100px;
+  background-color: black;
+}
+
 @media only screen and (max-width: 1024px) {
   .darkplanet {
     height: auto;
@@ -253,11 +276,12 @@ li {
 
   #map {
     height: 650px;
+    width: 80%;
   }
 
   .dataholder {
     height: 650px;
-    width: 70%;
+    width: 80%;
   }
 
   .flightdatalist {
@@ -275,8 +299,9 @@ li {
   .crewmateslistholder {
     height: 650px;
     margin-bottom: 150px;
-    width: 69%;
-    margin-top: 100px;
+    width: 80%;
+    margin: 0px;
+    margin-bottom: 200px;
   }
 
   .astronautimgline {
@@ -292,6 +317,55 @@ li {
   .astrobutton {
     width: auto;
   }
+
+  .datatitle {
+    font-size: 1rem;
+    padding-top: 20px;
+  }
+
+  li {
+    padding: 20px;
+  }
+
+  .imgholder {
+    padding: 0px;
+  }
+
+  .abysstext {
+    padding: 0;
+    padding-bottom: 25px;
+  }
+
+  .darkplanet {
+    padding: 0;
+  }
+
+  .svgarrow {
+    transform: translate(357px, -406px) rotate( 
+      11deg) scale(60%);
+  }
+
+  .svgarrowtwo {
+    transform: translate(-379px, 527px) rotate( 
+      4deg) scale(75%);
+  }
+
+  .svgplanetone {
+    transform: translate(271px, 51px) scale(0.7);
+  }
+
+  .svgplanettwo {
+    transform: translate(-320px, 739px) scale(0.8);
+  }
+
+  .break {
+    height: 325px;
+
+  }
+
+  .soyuzcontainer {
+    padding-top: 35px;
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -306,11 +380,12 @@ li {
 
   #map {
     height: 650px;
+    /* width: 70%; */
   }
 
   .dataholder {
     height: 650px;
-    width: 70%;
+    width: 80%;
   }
 
   .flightdatalist {
@@ -319,6 +394,32 @@ li {
     color: white;
     line-height: 1rem;
     font-family: "Roboto", sans-serif;
+  }
+
+  .crewmateslistholder {
+    margin-top: 100px;
+    margin-bottom: 160px;
+  }
+  .svgarrow {
+    transform: translate(275px, -420px) rotate(
+      11deg) scale(60%);
+  }
+
+  .svgarrowtwo {
+    transform: translate(-280px, 412px) rotate(
+      4deg) scale(70%);
+  }
+
+  .svgplanetone {
+    transform: translate(228px, 51px) scale(0.6);
+  }
+
+  .svgplanettwo {
+    transform: translate(-257px, 736px) scale(0.7);
+  }
+
+  .soyuzcontainer {
+    padding-top: 100px;
   }
 }
 
@@ -349,7 +450,7 @@ li {
   .dataholder {
     height: 650px;
     width: 90%;
-    margin-bottom: 100px;
+    margin-bottom: 20px;
   }
 
   .flightdatalist {
@@ -368,6 +469,36 @@ li {
     margin: 0px;
     margin-bottom: 100px;
     width: 90%;
+  }
+
+  li {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: solid 1px rgb(214, 214, 214);
+  }
+
+  .datatitle {
+    font-size: 1.2rem;
+  }
+
+  .svgarrow {
+    transform: translate(87px, -306px) rotate(11deg) scale(40%);
+  }
+
+  .svgarrowtwo {
+    transform: translate(-97px, 328px) rotate(4deg) scale(50%);
+  }
+
+  .svgplanetone {
+    transform: translate(85px, 99px) scale(0.4);
+  }
+
+  .svgplanettwo {
+    transform: translate(-97px, 592px) scale(0.5);
+  }
+
+  .soyuzcontainer {
+    padding-top: 100px;
   }
 }
 
@@ -469,11 +600,7 @@ input:checked + .slider:before {
   gap: 20px;
 }
 
-.break {
-  width: 100%;
-  height: 100px;
-  background-color: black;
-}
+
 
 .goButton {
   background-color: black;
