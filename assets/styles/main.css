@@ -5,14 +5,11 @@ body {
   font-size: 8px;
 }
 
-
-/* --------------------------------------------------- stops an horizontal scroll on some widths due to SVG breaking out of their container */
-html, body {
-  max-width: 100%;
+html {
+  max-width: 100vw;
   overflow-x: hidden;
+  background-color: black;
 }
-
-/* ------------------------------------------------------------------------------------------------------------------------------------ */
 
 .abyss {
   height: 100vh;
