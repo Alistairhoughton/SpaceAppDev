@@ -66,9 +66,10 @@ body {
 
 #warningAlert {
   opacity: 0;
+  text-align: center;
   margin-top: 27px;
   margin-bottom: 15px;
-  width: 120px;
+  width: 140px;
   animation-name: warning;
   animation-delay: 4s;
   animation-fill-mode: forwards;
