@@ -9,51 +9,21 @@
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
     />
+    <link rel="stylesheet" href="../assets/styles/modalcard.css">
     <link rel="stylesheet" href="../assets/styles/soyuz.css">
     <link rel="stylesheet" href="../assets/styles/main.css" />
-    <link rel="stylesheet" href="../assets/styles/modalcard.css">
     <link
     href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&display=swap"
     rel="stylesheet"
   />
-
    
     <link
       href="https://api.mapbox.com/mapbox.js/v3.3.1/mapbox.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../assets/styles/nav.css">
     <link rel="icon" type="image/x-icon" href="../assets/media/favicon.ico">
   </head>
   <body>
-
-    <!-- ----------------------------------------------------- -->
-
-    <nav class="navbar">
-
-     
-      <div class="burger">
-          <a class="menu-link" href="#"><svg id="burger" data-name="burger" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 91.67 70.67"><title>menu</title><line x1="3.92" y1="3.92" x2="87.74" y2="3.92" fill="none" stroke="#231f20" stroke-linecap="round" stroke-miterlimit="10" stroke-width="7.84"/><line x1="3.92" y1="35.33" x2="61.38" y2="35.33" fill="none" stroke="#231f20" stroke-linecap="round" stroke-miterlimit="10" stroke-width="7.84"/><line x1="3.92" y1="66.75" x2="87.74" y2="66.75" fill="none" stroke="#231f20" stroke-linecap="round" stroke-miterlimit="10" stroke-width="7.84"/><line x1="75.68" y1="35.33" x2="87.74" y2="35.33" fill="none" stroke="#231f20" stroke-linecap="round" stroke-miterlimit="10" stroke-width="7.84"/></svg></a>
-      </div>
-</nav>
-
-
-<div class="menu-overlay">
-  <nav class="overlay-menu">            
-      <div>
-
-         
-      <ul class="list">
-          <li><a class="nav-links1" href="#soyuzid">Spaceships</a></li>
-          <li><a class="nav-links2" href="#crewmatescontainerid">Crewmates</a></li>
-          <li><a class="nav-links3" href="#mapsectionid">ISS location</a></li>
-          <li><a class="nav-links3" href="#planetcardholderid">Explore the planets</a></li>
-        </ul>
-      </div>
-  </nav>
-</div>
-
-<!-- ------------------------------------------------------------------ -->
 
     <main>
       <div class="abyss">
@@ -212,9 +182,6 @@ c1.2,1,2.6,1.5,4.1,0.4c2.1-1.5,3-3.7,3.4-6c0.5-2.6,0.5-5.3,0.9-7.7C104.3,17.7,10
                   The International Space Station (ISS) is a modular space station (habitable artificial satellite) in low Earth orbit. 
                   It is a multinational collaborative project involving five participating space agencies: NASA (United States), Roscosmos (Russia), JAXA (Japan), ESA (Europe), and CSA (Canada).
                   The ownership and use of the space station is established by intergovernmental treaties and agreements.
-
-                  <br>
-                  <br>
                   The station serves as a microgravity and space environment research laboratory in which scientific research is conducted in astrobiology, astronomy, meteorology,
                    physics, and other fields.The ISS is suited for testing the spacecraft systems and equipment required for possible future long-duration missions to 
                    the Moon and Mars.</p>
@@ -336,9 +303,9 @@ c5.1-0.3,10.8-1,15.9-2.9C67.1,10.6,71.5,7.6,73.9,2.7L73.9,2.7z"/>
 </svg>
 
         </div>
-        <div id="crewmatescontainerid" class="crewmateslistholder">
+        <div class="crewmateslistholder">
           <ul class="crewmatelist">
-            <h2 class="datatitle">Now lets meet your  <br> crewmates astronaut <span id="storedName"></span></h2>
+            <h2 class="datatitle">Now lets meet your  <br> crewmates astronaut <br> <span id="storedName"></span></h2>
             <li><span id="mate1"></span></li>
             <li><span id="mate2"></span></li>
             <li><span id="mate3"></span></li>
@@ -367,7 +334,7 @@ c5.1-0.3,10.8-1,15.9-2.9C67.1,10.6,71.5,7.6,73.9,2.7L73.9,2.7z"/>
             <section class="modal-card-body">
                 <img src="https://www.quickanddirtytips.com/sites/default/files/styles/amp_metadata_content_image_min_696px_wide/public/images/19571/astronaut-in-space-compressor.png?itok=pcZiohU8" alt="">
               <p class="cardpara">
-                An astronaut (from the Greek "astron" meaning "star", and "nautes",meaning "sailor") is a person trained,
+                An astronaut (from the Greek "astron" (ἄστρον), meaning "star", and "nautes" (ναύτης), meaning "sailor") is a person trained,
                  equipped, and deployed by a human spaceflight program to serve as a commander or crew member aboard a spacecraft. 
                  Although generally reserved for professional space travelers, the terms are sometimes applied to anyone who travels into space, 
                  including scientists, politicians, journalists and tourists.</p>

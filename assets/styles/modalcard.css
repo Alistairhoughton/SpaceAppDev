@@ -8,17 +8,21 @@
     height: 100vh;
     width: 100%;
 }
+/* .goButton {
 
-.modal-card-head {
-  z-index: 10;
-}
+} */
 
+/* .imgholder {
+  width: 400px;
+  height: 400px;
+  z-index: 1;
+} */
 
 .modal-card {
+    /* width: 90%; */
     border-radius: 30px;
     height: 900px;
     color: rgb(219, 219, 219);
-    
     
 }
 
@@ -34,8 +38,6 @@
 
     
 }
-
-
 
 .cardpara {
     padding-top: 10px;
@@ -67,14 +69,7 @@
     opacity: 0;
   }
 
-  @media only screen and (max-width: 775px)
- {
-  .modal-card {
-    width: 70%;
- }
-}
-
-  @media only screen and (max-width: 380px) {
+  @media only screen and (max-width: 450px) {
     .modal-card {
       width: 90%;
   }
@@ -84,6 +79,6 @@
   }
 
   .modal-card-title {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
-  }
+}

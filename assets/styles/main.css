@@ -198,7 +198,6 @@ html {
   border-radius: 20px;
   min-width: 295px;
   border: solid 1px white;
-  z-index: 1;
 }
 
 .dataholder {
@@ -426,26 +425,6 @@ li {
   }
 }
 
-@media only screen and (max-width: 412px) {
-  .svgarrow {
-    transform: translate(152px, -243px) rotate( 
-11deg) scale(50%);}
-
-.svgarrowtwo {
-  transform: translate(-116px, 434px) rotate( 
-4deg) scale(70%);
-}
-
-.svgplanetone {
-  transform: translate(124px, 148px) scale(0.6);
-}
-
-.svgplanettwo {
-  transform: translate(-117px, 709px) scale(0.7);
-}
-
-}
-
 @media only screen and (max-width: 380px) {
   .darkplanet {
     height: auto;
@@ -490,7 +469,7 @@ li {
 
   .crewmateslistholder {
     margin: 0px;
-    margin-bottom: 225px;
+    margin-bottom: 100px;
     width: 90%;
   }
 
@@ -505,7 +484,7 @@ li {
   }
 
   .svgarrow {
-    transform: translate(125px, -306px) rotate(11deg) scale(40%);
+    transform: translate(87px, -306px) rotate(11deg) scale(40%);
   }
 
   .svgarrowtwo {
@@ -652,6 +631,3 @@ input:checked + .slider:before {
     height: 230px;
   }
 }
-
-
-
